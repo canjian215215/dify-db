@@ -1,0 +1,72 @@
+version: 0.0.1
+type: plugin
+author: fly
+name: dify-db
+label:
+  en_US: dify-db
+  ja_JP: dify-db
+  zh_Hans: dify-db
+  pt_BR: dify-db
+description:
+  en_US: |
+    This tool is used to execute SQL in an existing database.
+    MySQL:mysql+pymysql://root:123456@localhost:3306/test
+    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
+    SQLite:sqlite:///test.db
+    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
+  ja_JP: |
+    このツールは既存のデータベースでSQLを実行するために使用されます。
+    MySQL:mysql+pymysql://root:123456@localhost:3306/test
+    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
+    SQLite:sqlite:///test.db
+    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
+  zh_Hans: |
+    此工具用于在已存在的数据库中执行 SQL 查询。
+    MySQL:mysql+pymysql://root:123456@localhost:3306/test
+    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
+    SQLite:sqlite:///test.db
+    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
+  pt_BR: |
+    Esta ferramenta é usada para executar SQL em um banco de dados existente.
+    MySQL:mysql+pymysql://root:123456@localhost:3306/test
+    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
+    SQLite:sqlite:///test.db
+    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 268435456
+plugins:
+  tools:
+    - provider/dify-db.yaml
+  endpoints:
+    - provider/dify-endpoint.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-08T11:41:43.4621074+08:00
+privacy: PRIVACY.md
+verified: false

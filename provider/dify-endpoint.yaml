@@ -1,0 +1,15 @@
+settings:
+  - name: db_uri
+    type: secret-input
+    required: true
+    label:
+      en_US: Database URI
+      zh_Hans: 数据库 URI
+    placeholder:
+      en_US: Please input your Database URI
+      zh_Hans: 请输入你的 Database URI
+    help:
+      en_US: For example `mysql://<user>:<password>@<host>:<port>/<database>`
+      zh_Hans: 例如 `mysql://<user>:<password>@<host>:<port>/<database>`
+endpoints:
+  - endpoints/sql_execute.yaml
