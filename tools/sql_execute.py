@@ -9,7 +9,7 @@ from tools.db_util import DbUtil
 
 class SQLExecuteTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        # db_uri = self.runtime.credentials.get("db_uri")
+        # db_uri = self.runtime.credentials.get("db_uri", '')
         db_util = DbUtil(db_type=self.runtime.credentials.get("db_type"),
                         username=self.runtime.credentials.get("db_username"), 
                         password=self.runtime.credentials.get("db_password"),

@@ -102,15 +102,3 @@ credentials_for_provider:
     help:
       en_US: 'Database properties, for example: alt_host=host1&alt_host=host2&ssl_cipher=/path/to/crt'
       zh_Hans: 数据库属性，例如：alt_host=host1&alt_host=host2&ssl_cipher=/path/to/crt
-  # db_uri:
-  #   help:
-  #     en_US: For example `mysql://<user>:<password>@<host>:<port>/<database>`
-  #     zh_Hans: 例如 `mysql://<user>:<password>@<host>:<port>/<database>`
-  #   label:
-  #     en_US: Database URI
-  #     zh_Hans: 数据库 URI
-  #   placeholder:
-  #     en_US: Please enter the database URI
-  #     zh_Hans: 请输入数据库 URI
-  #   required: false
-  #   type: secret-input

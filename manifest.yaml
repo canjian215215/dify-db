@@ -8,24 +8,9 @@ label:
   zh_Hans: dify-db
   pt_BR: dify-db
 description:
-  en_US: |
-    This tool is used to execute SQL in an existing database.
-    MySQL:mysql+pymysql://root:123456@localhost:3306/test
-    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
-    SQLite:sqlite:///test.db
-    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
-  ja_JP: |
-    このツールは既存のデータベースでSQLを実行するために使用されます。
-    MySQL:mysql+pymysql://root:123456@localhost:3306/test
-    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
-    SQLite:sqlite:///test.db
-    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
-  zh_Hans: |
-    此工具用于在已存在的数据库中执行 SQL 查询。
-    MySQL:mysql+pymysql://root:123456@localhost:3306/test
-    PostgreSQL:postgresql+psycopg2://postgres:123456@localhost:5432/test
-    SQLite:sqlite:///test.db
-    Oracle:oracle+oracledb://scott:tiger@localhost:1521/orcl
+  en_US: This tool is used to execute SQL in an existing database.
+  ja_JP: このツールは既存のデータベースでSQLを実行するために使用されます。
+  zh_Hans: 此工具用于在已存在的数据库中执行 SQL 查询。
   pt_BR: |
     Esta ferramenta é usada para executar SQL em um banco de dados existente.
     MySQL:mysql+pymysql://root:123456@localhost:3306/test

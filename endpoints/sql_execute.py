@@ -10,7 +10,7 @@ class SQLEndpoint(Endpoint):
     def _invoke(self, r: Request, values: Mapping, settings: Mapping) -> Response:
 
         result = self.session.tool.invoke_builtin_tool(
-            provider="fly/database/database",
+            provider="fly/dify-db/dify-db",
             tool_name="sql_execute",
             parameters=r.json,
         )

@@ -1,6 +1,7 @@
 from collections.abc import Generator
 from typing import Any
 
+from tools.db_util import DbUtil
 from sqlalchemy import create_engine, inspect
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
@@ -53,7 +54,16 @@ Your response: SELECT * FROM Track WHERE GenreId = (SELECT GenreId FROM Genre WH
 
 class QueryTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        db_uri = self.runtime.credentials.get("db_uri")
+        # db_uri = self.runtime.credentials.get("db_uri")
+        db_util = DbUtil(db_type=self.runtime.credentials.get("db_type"),
+                        username=self.runtime.credentials.get("db_username"), 
+                        password=self.runtime.credentials.get("db_password"),
+                        host=self.runtime.credentials.get("db_host"), 
+                        port=self.runtime.credentials.get("db_port"),
+                        database=self.runtime.credentials.get("db_name"), 
+                        properties=self.runtime.credentials.get("db_properties"))
+
+        db_uri = db_util.get_url()
         engine = create_engine(db_uri)
         inspector = inspect(engine)
         dialect = engine.dialect.name

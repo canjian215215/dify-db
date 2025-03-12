@@ -3,6 +3,7 @@ identity:
   author: fly
   label:
     en_US: SQL Execute
+    zh_Hans: SQL 执行
 description:
   human:
     en_US: This tool is used to execute SQL in an existing database.
