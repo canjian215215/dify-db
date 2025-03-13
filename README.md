@@ -20,10 +20,13 @@ You can get different format of data, like json, csv, yaml, xlsx, html, md etc. 
 
 ### Database Connection Strings
 
-*   MySQL/Doris: `mysql+pymysql://username:password@host:port/database`
-*   PostgreSQL: `postgresql+psycopg2://username:password@host:port/database`
-*   Oracle: `oracle+oracledb://scott:tiger@localhost:1521/orcl`
-*   SQLite: `sqlite:///database.db`
+*   db_type: `mysql/Doris/oracle/postgreSQL/SQLite`
+*   db_host: `127.0.0.1`
+*   db_port: `3306`
+*   db_username: `test`
+*   db_password: `123`
+*   db_name: `test`
+*   db_properties: ``
 
 ### Tools
 
