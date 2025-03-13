@@ -26,7 +26,7 @@ You can get different format of data, like json, csv, yaml, xlsx, html, md etc. 
 *   db_username: `test`
 *   db_password: `123`
 *   db_name: `test`
-*   db_properties: ``
+*   db_properties: `alt_host=host1&alt_host=host2&ssl_cipher=/path/to/crt`
 
 ### Tools
 
